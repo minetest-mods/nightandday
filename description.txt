@@ -1,0 +1,1 @@
+Allows you to have different day and night speeds.
