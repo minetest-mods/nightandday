@@ -30,13 +30,14 @@ local function nightandday()
 	local ns = S:get_int("night_time_speed") or 72
 
 	local t = minetest.get_timeofday()
+	local cts = tonumber(G:get("time_speed"))
 
 	if t > 0.25 and t <= 0.75 then
-		if t ~= ds then
+		if cts ~= ds then
 			G:set("time_speed", ds)
 		end
 	else
-		if t ~= ns then
+		if cts ~= ns then
 			G:set("time_speed", ns)
 		end
 	end
